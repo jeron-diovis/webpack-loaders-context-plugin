@@ -1,7 +1,7 @@
 {
-  "name": "package-boilerplate",
-  "version": "0.0.1",
-  "description": "Basic boilerplate",
+  "name": "webpack-loaders-context-plugin",
+  "version": "1.0.0",
+  "description": "Allow to apply loaders only in certain context",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
