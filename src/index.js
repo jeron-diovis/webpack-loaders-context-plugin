@@ -32,7 +32,7 @@ export default class WebpackLoadersContextPlugin {
         if (absoluteModulePath.indexOf(context) !== 0) {
           return false
         }
-        return this.LoadersList.matchPart(path.relative(context, absoluteModulePath), origin)
+        return this.LoadersList.matchPart(sysPath.relative(context, absoluteModulePath), origin)
       }
     })
   }
