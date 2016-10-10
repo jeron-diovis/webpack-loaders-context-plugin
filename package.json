@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeron-diovis/package-boilerplate"
+    "url": "https://github.com/jeron-diovis/webpack-loaders-context-plugin"
   },
   "files": [
     "lib"
