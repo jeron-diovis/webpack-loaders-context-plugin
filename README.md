@@ -125,7 +125,7 @@ You may customize it with for certain loader like this:
 ```js
 loader: "my-loader",
 context: "/absolute/path/to/desired/folder",
-````. 
+``` 
 
 Here path still must be absolute – because, who knows, maybe you really need something from outside of working dir?
 
