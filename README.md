@@ -120,7 +120,13 @@ Default value is `useByDefault` from plugin's constructor.
 Boolean values used to explicitly enable/disable using context for this loader.
 
 Default context is a [compiler context](https://webpack.github.io/docs/configuration.html#context).
-You may customize with `context: /absolute/path/to/desired/folder`. 
+You may customize it with for certain loader like this:
+
+```js
+loader: "my-loader",
+context: "/absolute/path/to/desired/folder",
+````. 
+
 Here path still must be absolute – because, who knows, maybe you really need something from outside of working dir?
 
 ## Is it really so important?
