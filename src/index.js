@@ -26,13 +26,15 @@ export default class WebpackLoadersContextPlugin {
       return
     }
 
-    const { test } = loader
-    loader.test = absoluteModulePath => {
-      if (absoluteModulePath.indexOf(context) !== 0) {
-        return false
+    [ "test", "include", "exclude" ].forEach(key => {
+      const origin = loader[key]
+      loader[key] = absoluteModulePath => {
+        if (absoluteModulePath.indexOf(context) !== 0) {
+          return false
+        }
+        return this.LoadersList.matchPart(path.relative(context, absoluteModulePath), origin)
       }
-      return this.LoadersList.matchPart(sysPath.relative(context, absoluteModulePath), test)
-    }
+    })
   }
 
   _getLoaderContext(loader) {
